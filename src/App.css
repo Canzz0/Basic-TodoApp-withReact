@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+html{
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  overflow-y: visible;
+  background: linear-gradient( #e66465, #9198e5);
+  background-repeat:no-repeat;
+  background-size:auto ;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.place{
+  margin-top: 5%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  filter: drop-shadow(0 0 0.75rem rgb(130, 130, 130));
+}
+h1{
+  font-size: 75px;
+  font-weight: 800;
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+input{
+  font-size: larger;
+  margin-bottom: 15px;
+  border: black;
+  background-color: transparent;
+  width: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+button{
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: larger;
   color: white;
+  background: linear-gradient( #6464e6, #91ade5);
+  width: 15%;
+  border-style: double;
+  border-radius: 15px;
+  padding: 1%;
+}
+#warning{
+
+  font-size: 45px;
+  padding: 5px;
+  border-radius:15px;
+  animation: add-animation 0.5s;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+ul{
+  width: 50%;
+  display: flex;
+}
+li{
+  color: rgb(48, 47, 47);  margin: 7px;
+  list-style-type:none;
+  letter-spacing: 2px;
+  background: transparent;
+  border-width: 3px;
+  border-bottom: solid;
+  width: 100%;
+  font-size: 45px;
+  font-weight: 800;
+  animation: add-animation 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#remove{
+  width: max-content;
+  height: max-content;
+  animation: add-animation 0.5s;
+}
+@keyframes add-animation {
+  from{
+    opacity: 0;
+    margin-top: 15%;
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    opacity: 1;
+    margin-top: 0;
   }
+  
+}
+#remove:focus{
+  animation: remove-todo 0.5s;
+}
+@keyframes remove-todo {
+  from{
+    opacity: 1;
+    margin-top: 0%;
+  }
+  to{
+    opacity: 0;
+    margin-top: 15%;
+  }
+  
 }
