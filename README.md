@@ -1,3 +1,3 @@
-#React İle Todo Uygulaması
+# React İle Todo Uygulaması
 
 Burada React ile basit bir ToDo uygulaması yaptık.
